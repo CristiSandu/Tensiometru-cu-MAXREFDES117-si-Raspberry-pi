@@ -31,7 +31,11 @@ if __name__ == '__main__':
             plt.cla()
             plt.plot(data, label="Hr")
             plt.plot(data1, label="SO2")
+            plt.ylabel('Valoare Puls/SPO2')
+            plt.xlabel('UniTrans')
+            plt.title('Grafic Puls over time')
             plt.pause(0.01)
+            plt.legend()
             i= i+1
     plt.savefig('test.svg')
     ser.close()

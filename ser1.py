@@ -25,11 +25,9 @@ if __name__ == '__main__':
             else:
                 nextis = 0
                 hm = float(line)
+                print(hm)
                 data1= np.append(data1, hm)
-            
             print(tmp)
-            print(hm)
-
             plt.cla()
             plt.plot(data, label="Hr")
             plt.plot(data1, label="SO2")

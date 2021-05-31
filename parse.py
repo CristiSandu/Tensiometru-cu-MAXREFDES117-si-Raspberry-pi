@@ -2,8 +2,9 @@
 from datetime import datetime
 import matplotlib.pyplot as plt
 
+
 def getLineseFromFile():
-    file = open("TEST.TXT" ,"r")
+    file = open("TEST2.TXT" ,"r")
     lines = list()
     for i in file:
         lines.append(i)
@@ -28,14 +29,34 @@ def getParseDataInLists():
 
     return lists
 
-if __name__ == '__main__':
-    lists = getParseDataInLists()
-    plt.plot(lists[0], lists[1], label="Puls")
-    plt.plot(lists[0], lists[2], label="SPO2")
-    plt.ylabel('Valoare Puls/SPO2')
+def plotGraf(pltList1, pltList2,name,color):
+    plt.plot(pltList1,pltList2, label=name,color = color)
+    plt.ylabel('Valoare' + name)
     plt.xlabel('DateTime')
-    plt.title('Grafic Puls over time')
-    # plt.ylim(top=40)
+    plt.title('Grafic Puls over time' + name)
     plt.legend()
     plt.show()
+    plt.savefig(name +'.svg')
+
+
+def plotGraf2(pltList2,name, color ):
+    plt.plot(pltList2, label = name, color = color)
+    plt.ylabel('Valoare' + name)
+    plt.xlabel('DateTime')
+    plt.title('Grafic Puls over time ' + name)
+    plt.legend()
+    plt.show()
+
+
+if __name__ == '__main__':
+    lists = getParseDataInLists()
+    list1 = lists[1].copy()
+    list2 = lists[2].copy()
+    list1 = [int(i) for i in lists[1]]
+    list2 = [float(i) for i in lists[2]]
+    plotGraf( lists[0],list1, "Pulse","Red")
+
+    plotGraf( lists[0],list2, "Spo2","Blue")
+
+
     print(lists)

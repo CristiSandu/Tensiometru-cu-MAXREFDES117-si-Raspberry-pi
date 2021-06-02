@@ -13,7 +13,7 @@ if __name__ == '__main__':
     i = 0
     ser = serial.Serial('/dev/serial0', 9600, timeout=1)
     ser.flush()
-    nextis =0
+    nextis = 0
     while i <= 100:
         if ser.in_waiting > 0:
             line = ser.readline().decode('utf-8').rstrip()
@@ -37,6 +37,7 @@ if __name__ == '__main__':
             plt.pause(0.01)
             plt.legend()
             i= i+1
+
     plt.savefig('test.svg')
     ser.close()
         

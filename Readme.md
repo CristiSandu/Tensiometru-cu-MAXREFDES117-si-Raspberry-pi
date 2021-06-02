@@ -74,3 +74,5 @@
 | P8      | LV4 - HV4 | RX315 |
 | P10     | LV3 - HV3 | TX314 |
 | P14     | GND - GND | GND   |
+
+## [OCW - project link](https://ocw.cs.pub.ro/courses/pm/prj2021/abirlica/455)

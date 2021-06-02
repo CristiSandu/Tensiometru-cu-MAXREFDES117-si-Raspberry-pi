@@ -53,7 +53,7 @@ Ca si algoritmi folositi am ales sa raman la algoritmul oferit de producatorul s
 
 ## Demo
 
-![Demo YouTube](https://www.youtube.com/watch?v=EvRmBBJJen0)
+[Demo YouTube](https://www.youtube.com/watch?v=EvRmBBJJen0)
 
 ## Connections
 
